@@ -33,3 +33,19 @@
         ordns [[1 1][1 2][2 0]]]
     (testing "returns the board with all bombs placed as per ordns"
       (is (= [[1 2 3][4 :b :b][:b 8 9]] (generate-board-with-bombs board ordns))))))
+
+(deftest within-bounds-test
+  (testing "returns true if x and y are between 0 inclusive & 10 exclusive"
+    (is (= true (within-bounds? 1 4)))
+    (is (= true (within-bounds? 0 9)))
+    (is (= true (within-bounds? 5 5))))
+
+  (testing "returns false if x & y are out of bounds of 0 & 10"
+    (is (= false (within-bounds? 0 10)))
+    (is (= false (within-bounds? 1 11)))))
+
+(deftest get-neighbours-test
+  (testing "returns collection of neighbours within bounds for p & q"
+    (is (= [[0 1][1 0][1 1]] (get-neighbours 0 0)))
+    (is (= [[4 4][4 5][4 6][5 4][5 6][6 4][6 5][6 6]] (get-neighbours 5 5)))
+    (is (= [[4 0][4 1][5 1][6 0][6 1]] (get-neighbours 5 0)))))
