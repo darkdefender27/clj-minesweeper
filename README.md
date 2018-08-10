@@ -1,36 +1,23 @@
 # minesweeper
 
-FIXME: description
+Minesweeper application developed in a clj-workshop.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+``` sh
+brew install leiningen
+```
 
-## Usage
+## Build/Test/Run
 
-FIXME: explanation
-
-    $ java -jar minesweeper-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+``` sh
+lein do clean, test, run
+```
 
 ## License
 
-Copyright © 2018 FIXME
+GNU GPL Version 3, 29 June 2007.
+Please refer this link [GNU GPL 3.0 License] (http://www.gnu.org/licenses/gpl-3.0.txt) for detailed description.
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+
+**Free Software, Hell Yeah!** :facepunch:
